@@ -23,7 +23,14 @@
 .Admin {
   text-align: center;
   font-size: 2rem;
-  margin-top: 5%;
+  margin-top: 1%;
+}
+
+.LogoutButton {
+  text-align: left;
+  margin-left: 2%;
+  font-size: large;
+  font-size: large;
 }
 
 
@@ -41,10 +48,19 @@
   font-size: large;
 } 
 
-
-
 .wordRenderDiv {
   text-align: left;
   margin-left: 10%;
   font-size: large;
+}
+
+
+.addWord {
+  text-align: left;
+  margin-left: 10%;
+  font-size: large;
+}
+
+.addButton {
+  margin-left: 10px;
 }
