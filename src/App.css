@@ -3,3 +3,19 @@
   font-size: 2rem;
   margin-top: 5%;
 }
+
+
+.form {
+  background-color: grey;
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  padding: 20px;
+}
+
+
+.GuestButton {
+  margin-top: 10px;
+  font-size: 30px; 
+  padding: 10px 20px; 
+}

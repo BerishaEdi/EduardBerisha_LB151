@@ -1,49 +1,64 @@
 import React, { useState } from 'react'
 import { auth } from '../firebase'
-
+import { useNavigate } from "react-router-dom";
 
 const LogIn = () => {
 
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-
+    const navigate = useNavigate();
 
 
     const handleLogin = event => {
-        event.preventDefault(); 
+        event.preventDefault();
         auth
             .signInWithEmailAndPassword(email, password)
             .then(userCredentials => {
                 const user = userCredentials.user;
                 console.log('Eingelogt:', user.email);
+                navigate("/AdminPage");
 
             })
             .catch(error => alert(error.message))
     }
 
 
+    const goToHome = () => {
+        navigate("/Home")
+    }
 
 
     return (
         <div className='Login'>
             <p>LogIn</p>
-            <form onSubmit={handleLogin}>
-                <div className='Logininput' style={{ marginTop: "5%" }}>
-                    <label>Email</label>
-                    <br />
-                    <input type="text" name="email" onChange={e => setEmail(e.target.value)} required />
-                    <br />
-                    <label>Passwort</label>
-                    <br />
-                    <input type="password" name="password" onChange={e => setPassword(e.target.value)} required />
-                </div>
+            <div className="form">
+                <form onSubmit={handleLogin}>
+                    <div className='Logininput' style={{ marginTop: "5%" }}>
+                        <label>Email</label>
+                        <br />
+                        <input type="text" name="email" onChange={e => setEmail(e.target.value)} required />
+                        <br />
+                        <label>Passwort</label>
+                        <br />
+                        <input type="password" name="password" onChange={e => setPassword(e.target.value)} required />
+                    </div>
+                    <button
+                        type='submit'
+                        title='Anmelden'
+                        color='white'
+                    >Anmelden</button>
+                </form>
+            </div>
+            <div>
                 <button
+                    className='GuestButton' 
                     type='submit'
-                    title='Anmelden'
+                    title='Gast'
                     color='white'
-                >Anmelden</button>
-            </form>
+                    onClick={goToHome}
+                >Als Gast fortfahren</button>
+            </div>
         </div>
 
     )
