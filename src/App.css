@@ -19,3 +19,32 @@
   font-size: 30px; 
   padding: 10px 20px; 
 }
+
+.Admin {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 5%;
+}
+
+
+.wordRender {
+  text-align: left;
+  border: 0;
+  background-color: white;
+  font-size: large;
+} 
+.wordRender:hover {
+  text-align: left;
+  border: 2;
+  border-color: black;
+  background-color: gray;
+  font-size: large;
+} 
+
+
+
+.wordRenderDiv {
+  text-align: left;
+  margin-left: 10%;
+  font-size: large;
+}
