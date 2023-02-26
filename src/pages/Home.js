@@ -78,6 +78,7 @@ const Home = () => {
 
   const checkAnswer = (e) => {
     e.preventDefault();
+    if (guthaben !== 0) {
     setGuthaben(guthaben - 50)
     const guess = e.target[0].value.trim()
     const isCorrect = guess === word
@@ -96,6 +97,9 @@ const Home = () => {
       setCorrect(isCorrect)
     }
     console.log(guthaben)
+  }else {
+    window.alert("Du hast kein Guthaben zum Gambeln")
+  }
   }
 
 
@@ -122,13 +126,48 @@ const Home = () => {
     saveHighscore()
   }
 
-  /*   useEffect(() => {
-      saveHighscore();
-    }, [guthaben]);
-   */
+
+
+  const handleButtonClick = () => {
+    if (guthaben !== 0) {
+      const randomNum = Math.floor(Math.random() * 5);
+      switch (randomNum) {
+        case 0:
+          setGuthaben(guthaben => guthaben * 2);
+          break;
+        case 1:
+          setGuthaben(0);
+          break;
+        case 2:
+          setGuthaben(guthaben => guthaben + 100);
+          break;
+        case 3:
+          setGuthaben(guthaben => guthaben - 50);
+          break;
+        case 4:
+          setGuthaben(0);
+          break;
+        default:
+          break;
+      }
+    } else {
+      window.alert("Du hast kein Guthaben zum Gambeln")
+    }
+  }
+
+
+  const goToHighscore = () => {
+    navigate("/Highscore")
+  }
+
+
+
 
   return (
     <div className='Home'>
+      <div className='HighscoreButton'>
+        <button onClick={goToHighscore}>Gehe zur Leaderboard</button>
+      </div>
       <p>Spiel</p>
       <div className='gameDiv'>
         <form onSubmit={checkAnswer}>
@@ -138,6 +177,8 @@ const Home = () => {
         </form>
         <p>Tipp: {hint}</p>
         <p>Guthaben: {guthaben}</p>
+        <button className="GambleButton" onClick={handleButtonClick}>Dreh am Rad</button>
+        <br />
         <button
           className='PayOutButton'
           type='submit'

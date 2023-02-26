@@ -74,8 +74,8 @@ const AdminPage = () => {
             })
             .catch((error) => {
                 console.error("Error adding word:", error);
-            });
-    };
+            })
+    }
 
 
     const handleClick = (wordId) => {
@@ -90,9 +90,57 @@ const AdminPage = () => {
                 })
                 .catch((error) => {
                     console.error(`Error deleting word with ID ${wordId}:`, error);
-                });
+                })
         }
-    };
+    }
+
+
+    const deletLeaderboard = () => {
+        const collectionRef = db.collection("users");
+        const batchSize = 50;
+      
+        return new Promise((resolve, reject) => {
+          deleteQueryBatch(collectionRef, batchSize, resolve, reject);
+        });
+      };
+      
+      const deleteQueryBatch = (query, batchSize, resolve, reject) => {
+        query
+          .limit(batchSize)
+          .get()
+          .then((snapshot) => {
+            // When there are no documents left, we are done
+            if (snapshot.size == 0) {
+              return 0;
+            }
+      
+            // Delete documents in a batch
+            const batch = db.batch();
+            snapshot.docs.forEach((doc) => {
+              batch.delete(doc.ref);
+            });
+      
+            return batch.commit().then(() => {
+              return snapshot.size;
+            });
+          })
+          .then((numDeleted) => {
+            if (numDeleted === 0) {
+              resolve();
+              return;
+            }
+      
+            // Recurse on the next process tick to avoid exploding the stack.
+            process.nextTick(() => {
+              deleteQueryBatch(query, batchSize, resolve, reject);
+            });
+          })
+          .catch(reject);
+      };
+      
+
+
+
 
     return (
         <div className='Admin'>
@@ -100,6 +148,7 @@ const AdminPage = () => {
                 <button onClick={handleLogout}>Logout</button>
             </div>
             <p>Admin Verwaltung</p>
+            <button className="deleteLeaderBoard" onClick={deletLeaderboard}>Leaderboard wieder auf Null setzen</button>
             <div className="addWord">
                 <form onSubmit={handleSubmit}>
                     <input

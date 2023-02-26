@@ -8,7 +8,7 @@ const LogIn = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const navigate = useNavigate();
-    
+
 
     const handleLogin = event => {
         event.preventDefault();
@@ -29,8 +29,16 @@ const LogIn = () => {
     }
 
 
+    const goToHighscore = () => {
+        navigate("/Highscore")
+      }
+
+
     return (
         <div className='Login'>
+            <div className='HighscoreButton'>
+                <button onClick={goToHighscore}>Gehe zur Leaderboard</button>
+            </div>
             <p>LogIn</p>
             <div className="form">
                 <form onSubmit={handleLogin}>
@@ -49,16 +57,18 @@ const LogIn = () => {
                         color='white'
                     >Anmelden</button>
                 </form>
+                <p style={{fontSize: "1rem"}}>Admin Login = admin@info.ch Pw = admin123</p>
             </div>
             <div>
                 <button
-                    className='GuestButton' 
+                    className='GuestButton'
                     type='submit'
                     title='Gast'
                     color='white'
                     onClick={goToHome}
                 >Als Gast fortfahren</button>
             </div>
+
         </div>
 
     )
