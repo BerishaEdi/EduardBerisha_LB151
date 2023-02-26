@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { auth, db } from "../firebase";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [word, setWord] = useState("");
@@ -8,11 +9,42 @@ const Home = () => {
   const [inputValue, setInputValue] = useState('')
   const [correct, setCorrect] = useState(false);
   const [guthaben, setGuthaben] = useState(500)
+  const [userName, setUserName] = useState('');
+  const navigate = useNavigate();
 
 
   useEffect(() => {
+    if (!userName) {
+      const name = prompt("Bitte gib deinen Namen ein:");
+      setUserName(name);
+      console.log(name)
+      saveUserInDB(name)
+    }
     loadWords();
   }, [])
+
+
+  const saveUserInDB = (userName) => {
+    db.collection("users")
+      .doc(userName)
+      .get()
+      .then((doc) => {
+        if (!doc.exists) {
+          db.collection("users")
+            .doc(userName)
+            .set({ name: userName })
+            .then(() => {
+              console.log("User added to Firestore");
+            })
+            .catch((error) => {
+              console.error("Error adding user to Firestore: ", error);
+            });
+        }
+      })
+      .catch((error) => {
+        console.error("Error checking if user exists in Firestore: ", error);
+      });
+  };
 
   const loadWords = () => {
     db.collection("words")
@@ -46,13 +78,13 @@ const Home = () => {
 
   const checkAnswer = (e) => {
     e.preventDefault();
-    setGuthaben(guthaben - 50);
-    const guess = e.target[0].value.trim();
-    const isCorrect = guess === word;
+    setGuthaben(guthaben - 50)
+    const guess = e.target[0].value.trim()
+    const isCorrect = guess === word
     const message = isCorrect ? 'Richtig! Du hast 100 Guthaben gewonnen. Möchtest du eine neue Runde starten?' : 'Leider falsch. Möchtest du einen neue Runde starten';
     const shouldStartNewRound = window.confirm(message);
     if (shouldStartNewRound) {
-      handleNewRound();
+      handleNewRound()
       if (isCorrect) {
         setGuthaben(guthaben + 100);
       }
@@ -60,9 +92,10 @@ const Home = () => {
       if (isCorrect) {
         setGuthaben(guthaben + 100);
       }
-      setInputValue('');
-      setCorrect(isCorrect);
+      setInputValue('')
+      setCorrect(isCorrect)
     }
+    console.log(guthaben)
   }
 
 
@@ -73,16 +106,45 @@ const Home = () => {
   }
 
 
+
+  const saveHighscore = () => {
+    db.collection("users")
+      .doc(userName)
+      .update({ guthaben: guthaben })
+      .catch((error) => {
+        console.log("Error updating document: ", error);
+      });
+  };
+
+
+  const payout = () => {
+    navigate("/")
+    saveHighscore()
+  }
+
+  /*   useEffect(() => {
+      saveHighscore();
+    }, [guthaben]);
+   */
+
   return (
     <div className='Home'>
       <p>Spiel</p>
       <div className='gameDiv'>
         <form onSubmit={checkAnswer}>
-          <input type='text' placeholder='Gib hier dein Wort ein' />
+          <input type='text' placeholder='Gib hier das Wort ein' />
+          <br />
           <button>Prüfen</button>
         </form>
         <p>Tipp: {hint}</p>
-        <p>Gutgaben: {guthaben}</p>
+        <p>Guthaben: {guthaben}</p>
+        <button
+          className='PayOutButton'
+          type='submit'
+          title='payout'
+          color='white'
+          onClick={payout}
+        >Auszahlen</button>
       </div>
     </div>
   )

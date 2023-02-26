@@ -29,6 +29,7 @@ const AdminPage = () => {
                     newWordsArray.push({
                         id: doc.id,
                         word: doc.data().name,
+                        hint: doc.data().hint
                     });
                 });
                 setWordsArray(newWordsArray);
@@ -114,6 +115,7 @@ const AdminPage = () => {
                 {wordsArray.map((word) => (
                     <p key={word.id}>
                         <button className='wordRender' onClick={() => handleClick(word.id)}>{word.word}</button>
+                        <span className='wordHint'>Tipp: {word.hint}</span>
                     </p>
                 ))}
             </div>
