@@ -27,17 +27,30 @@ const Home = () => {
       });
   }
 
-  const getRandomWord = (array) => {
-    const shuffledArray = array.sort(() => Math.random() - 0.5);
+  const getRandomWord = () => {
+    const shuffledArray = wordsArray.sort(() => Math.random() - 0.5);
     const firstWord = shuffledArray[0].word;
-    setWord(firstWord);
-    console.log(firstWord);
+    const shuffledWord = shuffleWord(firstWord);
+    setWord(shuffledWord);
+    console.log(shuffledWord);
   }
+
+  const shuffleWord = (word) => {
+    let shuffledWord = '';
+    const wordArray = word.split('');
+    while (wordArray.length > 0) {
+      const randomIndex = Math.floor(Math.random() * wordArray.length);
+      shuffledWord += wordArray[randomIndex];
+      wordArray.splice(randomIndex, 1);
+    }
+    return shuffledWord;
+  }
+
 
   return (
     <div className='Home'>
       <p>Home</p>
-      <p>Random Word: {word}</p>
+      <p>{word}</p>
     </div>
   )
 }
