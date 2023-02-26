@@ -71,3 +71,13 @@
   font-size: 2rem;
   margin-top: 1%;
 }
+
+
+.gameDiv{
+  background-color: aqua;
+  width: 40%;
+  padding: 2em;
+  margin: auto auto;
+  font-size: 1rem;
+
+}
