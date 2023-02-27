@@ -111,20 +111,21 @@ const Home = () => {
 
 
 
+  const payout = () => {
+    navigate("/")
+    saveHighscore()
+  }
+
+
   const saveHighscore = () => {
     db.collection("users")
       .doc(userName)
       .update({ guthaben: guthaben })
       .catch((error) => {
-        console.log("Error updating document: ", error);
-      });
-  };
-
-
-  const payout = () => {
-    navigate("/")
-    saveHighscore()
+        console.log("Error updating document: ", error)
+      })
   }
+
 
 
 

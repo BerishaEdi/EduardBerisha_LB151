@@ -69,7 +69,6 @@ const AdminPage = () => {
             })
             .then((docRef) => {
                 console.log("New word added with ID:", docRef.id);
-                // Refresh the list of words to reflect the addition
                 loadWords();
             })
             .catch((error) => {
@@ -109,12 +108,10 @@ const AdminPage = () => {
           .limit(batchSize)
           .get()
           .then((snapshot) => {
-            // When there are no documents left, we are done
             if (snapshot.size == 0) {
               return 0;
             }
       
-            // Delete documents in a batch
             const batch = db.batch();
             snapshot.docs.forEach((doc) => {
               batch.delete(doc.ref);
@@ -130,7 +127,6 @@ const AdminPage = () => {
               return;
             }
       
-            // Recurse on the next process tick to avoid exploding the stack.
             process.nextTick(() => {
               deleteQueryBatch(query, batchSize, resolve, reject);
             });
