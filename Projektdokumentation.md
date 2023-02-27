@@ -142,6 +142,6 @@ Siehe im README.md wie Sie die Applikation aufsetzen und Starten können
 
 # 10 Allgemeines
 
-- [ ] Ich habe die Rechtschreibung überprüft
-- [ ] Ich habe überprüft, dass die Nummerierung von Testfällen und User Stories übereinstimmen
-- [ ] Ich habe alle mit ✍️ markierten Teile ersetzt
+- [x] Ich habe die Rechtschreibung überprüft
+- [x] Ich habe überprüft, dass die Nummerierung von Testfällen und User Stories übereinstimmen
+- [x] Ich habe alle mit ✍️ markierten Teile ersetzt
