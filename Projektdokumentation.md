@@ -137,8 +137,11 @@ Fazit:
 Die meisten Testfälle sind erfolgreich und das Grundprinzip des Spieles funktionert jedoch fehlen vereinzelte Funktionen im grossen und ganzen jedoch ist das Spiel anwendbar. Diese Version vom Spiel wäre noch nicht bereit zum verföffentlicht werden.
 
 # 9 `README.md`
-Siehe im README.md wie Sie die Applikation aufsetzen und Starten können
 
+Um das Projekt zu starten 
+benötigen Sie einen Quelltext-Editor üblicherweise Visual Studio Code, 
+Sie müssen auf Ihrem Gerät Node.js installiert haben und mein Projekt lokal abgespeichert haben und im Quelltext-Editor geöffnet haben.
+Im Terminal können sie "npm install" ausführen womit alle notwendigen Packages runtergeladen werden und Sie nur noch "npm start" eingeben müssen und das Projekt startet.
 
 # 10 Allgemeines
 
