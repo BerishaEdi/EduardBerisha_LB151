@@ -10,6 +10,8 @@ const LogIn = () => {
     const navigate = useNavigate();
 
 
+
+/* Das Admin Login wird hier überprüft mit hilfe von Firebase Auth, falls der Login erfolgreich war wird man zur Admin seite geschickt.*/
     const handleLogin = event => {
         event.preventDefault();
         auth
@@ -22,6 +24,7 @@ const LogIn = () => {
             })
             .catch(error => alert(error.message))
     }
+
 
 
     const goToHome = () => {

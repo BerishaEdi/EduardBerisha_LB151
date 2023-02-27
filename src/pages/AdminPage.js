@@ -19,7 +19,7 @@ const AdminPage = () => {
     }, [])
 
 
-
+/* Diese Funktion nimmt alle Wörter und Tipps aus der Datenbank und speichert sie in einem Array der auf den Bildischrm gerendert wird. */
     const loadWords = () => {
         db.collection("words")
             .get()
@@ -62,53 +62,59 @@ const AdminPage = () => {
     };
 
 
+    /* Hier wird ein neues Wort in der Datenbank eingefügt*/
     const addWord = (newWord) => {
         db.collection("words")
             .add({
                 name: newWord,
             })
             .then((docRef) => {
-                console.log("New word added with ID:", docRef.id);
                 loadWords();
             })
             .catch((error) => {
-                console.error("Error adding word:", error);
+                console.error("Error:", error);
             })
     }
 
 
+    /* Hier wird das löschen vcn einem Wort geregelt.*/
     const handleClick = (wordId) => {
         console.log(`Button for word with ID ${wordId} was clicked.`);
-        if (window.confirm(`Are you sure you want to delete the word with ID ${wordId}?`)) {
+        if (window.confirm(`Bist du sicher du willst das Wort mit der ID: ${wordId} löschen?`)) {
             db.collection("words")
                 .doc(wordId)
                 .delete()
                 .then(() => {
-                    console.log(`Word with ID ${wordId} was deleted successfully.`);
+                    console.log(`Wort mit ID ${wordId} wurde gelöscht`);
                     loadWords();
                 })
                 .catch((error) => {
-                    console.error(`Error deleting word with ID ${wordId}:`, error);
+                    console.error(`Error deleting word ID ${wordId}:`, error);
                 })
         }
     }
 
 
-    const deletLeaderboard = () => {
+
+    
+    const deleteLeaderboard = () => {
         const collectionRef = db.collection("users");
         const batchSize = 50;
       
         return new Promise((resolve, reject) => {
           deleteQueryBatch(collectionRef, batchSize, resolve, reject);
         });
-      };
-      
+      }
+
+
+
+      /* Zusammen mit der Funktion deleteLeaderboard() die Rangliste und alle Spieler aus der Datenbank gelöscht*/
       const deleteQueryBatch = (query, batchSize, resolve, reject) => {
         query
           .limit(batchSize)
           .get()
           .then((snapshot) => {
-            if (snapshot.size == 0) {
+            if (snapshot.size === 0) {
               return 0;
             }
       
@@ -144,7 +150,7 @@ const AdminPage = () => {
                 <button onClick={handleLogout}>Logout</button>
             </div>
             <p>Admin Verwaltung</p>
-            <button className="deleteLeaderBoard" onClick={deletLeaderboard}>Leaderboard wieder auf Null setzen</button>
+            <button className="deleteLeaderBoard" onClick={deleteLeaderboard}>Leaderboard wieder auf Null setzen</button>
             <div className="addWord">
                 <form onSubmit={handleSubmit}>
                     <input

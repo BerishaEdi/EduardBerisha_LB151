@@ -10,7 +10,8 @@ const Highscore = () => {
 
 
 
-
+/* Hier werden die Spieler mit ihrem dazugehörigen Highscore aus der Datenbank gelesen und 
+in einem Array gespeichert sortiert nach der Höhe des Highscores */
     useEffect(() => {
         const unsubscribe = db.collection("users")
             .orderBy("guthaben", "desc")

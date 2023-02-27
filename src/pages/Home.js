@@ -23,7 +23,7 @@ const Home = () => {
     loadWords();
   }, [])
 
-
+/* Der Username wird in der Db gespeichert */
   const saveUserInDB = (userName) => {
     db.collection("users")
       .doc(userName)
@@ -34,18 +34,20 @@ const Home = () => {
             .doc(userName)
             .set({ name: userName })
             .then(() => {
-              console.log("User added to Firestore");
+              console.log("User added");
             })
             .catch((error) => {
-              console.error("Error adding user to Firestore: ", error);
+              console.error("Error adding user", error);
             });
         }
       })
       .catch((error) => {
-        console.error("Error checking if user exists in Firestore: ", error);
+        console.error("Error checking if user exists", error);
       });
   };
 
+
+  /* Hier werden alle Wörtert und die Tipps aus der Db geladen und in einem Array gespeichert */
   const loadWords = () => {
     db.collection("words")
       .get()
@@ -65,6 +67,7 @@ const Home = () => {
       });
   }
 
+  /* Random Wort wird aus dem Array genommen */
   const getRandomWord = (array) => {
     const shuffledArray = array.sort(() => Math.random() - 0.5);
     const firstWord = shuffledArray[0].word;
@@ -76,6 +79,7 @@ const Home = () => {
     console.log(firstWord);
   };
 
+  /* Es wird überprüft ob die Antwort richtig ist und dementsprechend wird gewinn ausgezahlt oder nur gebühr entnommen */
   const checkAnswer = (e) => {
     e.preventDefault();
     if (guthaben !== 0) {
@@ -117,6 +121,7 @@ const Home = () => {
   }
 
 
+  /* Der Score des Users wird beim Payout in die Db gespeichert */
   const saveHighscore = () => {
     db.collection("users")
       .doc(userName)
@@ -128,7 +133,7 @@ const Home = () => {
 
 
 
-
+/* Hier wird die Funktion des Glücksrad geregelt. */
   const handleButtonClick = () => {
     if (guthaben !== 0) {
       const randomNum = Math.floor(Math.random() * 5);
