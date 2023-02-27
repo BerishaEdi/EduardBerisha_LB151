@@ -137,5 +137,4 @@ Fazit:
 Die meisten Testfälle sind erfolgreich und das Grundprinzip des Spieles funktionert jedoch fehlen vereinzelte Funktionen im grossen und ganzen jedoch ist das Spiel anwendbar. Diese Version vom Spiel wäre noch nicht bereit zum verföffentlicht werden.
 
 # 9 `README.md`
-
-✍️ Beschreiben Sie ausführlich in einer README.md, wie Ihre Applikation gestartet und ausgeführt wird. Legen Sie eine geeignete Möglichkeit (Skript, Export, …) bei, Ihre Datenbank wiederherzustellen.
+Siehe im README.md wie Sie die Applikation aufsetzen und Starten können
