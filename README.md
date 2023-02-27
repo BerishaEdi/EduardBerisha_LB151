@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Projekt-Dokumentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+✍️ Ihr Nachname
 
-## Available Scripts
+| Datum | Version | Zusammenfassung                                              |
+| ----- | ------- | ------------------------------------------------------------ |
+|       | 0.0.1   | ✍️ Jedes Mal, wenn Sie an dem Projekt arbeiten, fügen Sie hier eine neue Zeile ein und beschreiben in *einem* Satz, was Sie erreicht haben. |
+|       | 0.0.2   |                                                              |
+|       | 0.0.3   |                                                              |
+|       | 0.0.4   |                                                              |
+|       | 0.0.5   |                                                              |
+|       | 0.0.6   |                                                              |
+|       | 1.0.0   |                                                              |
 
-In the project directory, you can run:
+# 0 Ihr Projekt
 
-### `npm start`
+✍️ Beschreiben Sie Ihr Projekt in einem griffigen Satz.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 1 Analyse
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✍️ Beschreiben Sie, auf welchem Tier Sie die dynamischen Elemente der Anwendung unterbringen möchten:
 
-### `npm test`
+* Tier 1 (Presentation): ...
+* Tier 2 (Webserver):
+* Tier 3 (Application Server):
+* Tier 4 (Dataserver):
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 2 Technologie
 
-### `npm run build`
+✍️ Beschreiben Sie für dieselben Tiers, welche Programmiersprache bzw. Technologie Sie verwenden möchten.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 3 Datenbank
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+✍️ Wie steuern Sie Ihre Datenbank an? Wie ist das Interface aufgebaut? 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 4.1 User Stories
 
-### `npm run eject`
+✍️ Formulieren Sie klare Anforderungen in der Form von User Stories (*„als … möchte ich … damit …“*) und zu jeder Anforderung mindestens einen dazugehörigen Testfall (in Kapitel 4.2). 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+✍️ Formulieren Sie weitere, eigene Anforderungen und Testfälle, wie Sie Ihre Applikation erweitern möchten. Geben Sie diesen statt einer Nummer einen Buchstaben (`A`, `B`, etc.)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| US-№ | Verbindlichkeit | Typ  | Beschreibung                       |
+| ---- | --------------- | ---- | ---------------------------------- |
+| 1    |                 |      | Als ein 🤷‍♂️ möchte ich 🤷‍♂️, damit 🤷‍♂️ |
+| ...  |                 |      |                                    |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+✍️ Jede User Story hat eine ganzzahlige Nummer (1, 2, 3 etc. oder Zahl), eine Verbindlichkeit (Muss oder Kann?), und einen Typ (Funktional, Qualität, Rand). 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# 4.2 Testfälle
 
-## Learn More
+| TC-№ | Vorbereitung | Eingabe | Erwartete Ausgabe |
+| ---- | ------------ | ------- | ----------------- |
+| 1.1  |              |         |                   |
+| ...  |              |         |                   |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 5 Prototyp
 
-### Code Splitting
+✍️ Erstellen Sie Prototypen für das GUI (Admin-Interface und Quiz-Seite).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 6 Implementation
 
-### Analyzing the Bundle Size
+✍️ Halten Sie fest, wann Sie welche User Story bearbeitet haben
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| User Story | Datum | Beschreibung |
+| ---------- | ----- | ------------ |
+| ...        |       |              |
 
-### Making a Progressive Web App
+# 7 Projektdokumentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| US-№ | Erledigt? | Entsprechende Code-Dateien oder Erklärung |
+| ---- | --------- | ----------------------------------------- |
+| 1    | ja / nein |                                           |
+| ...  |           |                                           |
 
-### Advanced Configuration
+# 8 Testprotokoll
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+✍️ Fügen Sie hier den Link zu dem Video ein, welches den Testdurchlauf dokumentiert.
 
-### Deployment
+| TC-№ | Datum | Resultat | Tester |
+| ---- | ----- | -------- | ------ |
+| 1.1  |       |          |        |
+| ...  |       |          |        |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+✍️ Vergessen Sie nicht, ein Fazit hinzuzufügen, welches das Test-Ergebnis einordnet.
 
-### `npm run build` fails to minify
+# 9 `README.md`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+✍️ Beschreiben Sie ausführlich in einer README.md, wie Ihre Applikation gestartet und ausgeführt wird. Legen Sie eine geeignete Möglichkeit (Skript, Export, …) bei, Ihre Datenbank wiederherzustellen.
+
+# 10 Allgemeines
+
+- [ ] Ich habe die Rechtschreibung überprüft
+- [ ] Ich habe überprüft, dass die Nummerierung von Testfällen und User Stories übereinstimmen
+- [ ] Ich habe alle mit ✍️ markierten Teile ersetzt
+
