@@ -140,7 +140,8 @@ Die meisten Testfälle sind erfolgreich und das Grundprinzip des Spieles funktio
 Siehe im README.md wie Sie die Applikation aufsetzen und Starten können
 
 
-10 Allgemeines
-[ ] Ich habe die Rechtschreibung überprüft
-[ ] Ich habe überprüft, dass die Nummerierung von Testfällen und User Stories übereinstimmen
-[ ] Ich habe alle mit ✍️ markierten Teile ersetzt
+# 10 Allgemeines
+
+- [ ] Ich habe die Rechtschreibung überprüft
+- [ ] Ich habe überprüft, dass die Nummerierung von Testfällen und User Stories übereinstimmen
+- [ ] Ich habe alle mit ✍️ markierten Teile ersetzt
