@@ -4,11 +4,11 @@ Berisha Eduard
 
 | Datum | Version | Zusammenfassung                                              |
 | ----- | ------- | ------------------------------------------------------------ |
-| 6.02.2023 | 0.0.1   | Gameprinzip + Logik implementiert. |
+| 6.02.2023 | 0.0.1   | Adminseite erstellt |
 | 13.02.2023 | 0.0.2 | Firebase Konfigurieren, Datenbank und Authentifikation einrichten |
 | 13.02.2023 | 0.0.3   | Admin Login mit Firebase eingerichtet |
 | 20.02.2023 | 0.0.4   | Funktionalität für das Spiel erstellt. |
-| 26.02.2023 | 0.0.5   | Leaderboard erstellt, Score wird in der Datenbank gespeichert und in der Rangliste ausgegeben | 
+| 26.02.2023 | 0.0.4   | Leaderboard erstellt, Score wird in der Datenbank gespeichert und in der Rangliste ausgegeben | 
 | 27.02.2023 | 1.0.0   | Bugs behoben |
 
 # 0 Ihr Projekt
@@ -52,48 +52,81 @@ Das Interface zur Interaktion mit der Datenbank wird in diesem Beispiel durch di
 | 11  | Muss | Funktional | Als Kandidat möchte ich die Möglichkeit haben, jederzeit das Spiel zu beenden und meinen aktuellen Gewinn in die Highscore-Liste zu übernehmen, oder das Spiel fortzusetzen, um einen höheren Gewinn zu erzielen. |
 | 12 | Muss | Funktional |Als Kandidat möchte ich, das meine Spielrunden gezählt werden, um zu sehen wie viele Runden ich effektiv gebraucht habe um meine Geldsumme zu erspielen. |
 | 13 | Muss | Rand | Als Administrator möchte ich eine bestimmte Anzahl von Wörtern und Fragen in das Spiel einfügen können, um sicherzustellen, dass genug Inhalt vorhanden ist, um das Spiel interessant und unterhaltsam zu machen |
-
-
-✍️ Jede User Story hat eine ganzzahlige Nummer (1, 2, 3 etc. oder Zahl), eine Verbindlichkeit (Muss oder Kann?), und einen Typ (Funktional, Qualität, Rand). 
+ 
 
 # 4.2 Testfälle
 
-| TC-№ | Vorbereitung | Eingabe | Erwartete Ausgabe |
-| ---- | ------------ | ------- | ----------------- |
-| 1.1  |              |         |                   |
-| ...  |              |         |                   |
+| Tc-Nr | Vorbereitung | Eingabe  | Erwartete Ausgabe                       |
+| ---- | --------------- | ---- | ---------------------------------- |
+| 1.1  | Der Admin Account existiert | Email und Passwort | Weiterleitung zur Adminseite. | 
+| 1.2  | Der Admin Account existiert | Neues Rätselwort Hinzugügen | Erfolgreiches Hinzufügen des Rätselwortes. |
+| 1.4  | Highscoreliste enthätl Spielerdaten |  | Der Highscore wird gelöscht. |
+| 1.5  | Das Spiel Starten | Den Namen eingeben | Der Name wird in der Datenbank gepseichert und im Leaderboard angezeigt. |
+| 1.6  | Man befindet sich im Spiel | - | Der Kontostand wird dauerhaft auf dem neusten Stand angezeigt. |
+| 1.7  | Man befindet sich im Spiel | - | Der Lebenstand wird dauerhaft auf dem neusten Stand angezeigt. |
+| 1.9  | Man befindet sich auf der Leaderboardseite | - | Es wird der Leaderboard mit allen Spielern angezeigt nach Guthaben sortiert. |
+| 1.11  | Man befindet sich im Spiel | Man drückt den Knopf auszahlen | Man wird auf die Startseite zurückgelitet und der Score wird im Leaderboard gezeigt |
 
-✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
 
 # 5 Prototyp
+Quiz-Seite:
 
-✍️ Erstellen Sie Prototypen für das GUI (Admin-Interface und Quiz-Seite).
+![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG)
+
+
+
+Admin-Interface
+
+![alt text](https://github.com/BerishaEdi/lb151/blob/master/Admin-gui.PNG)
+
 
 # 6 Implementation
 
-✍️ Halten Sie fest, wann Sie welche User Story bearbeitet haben
-
 | User Story | Datum | Beschreibung |
-| ---------- | ----- | ------------ |
-| ...        |       |              |
+| ---- | ------| -------- |
+| 1.1  | 13.02.2023 | erfolgreich implementiert |       
+| 1.2  | 20.02.2023 | erfolgreich implementiert |
+| 1.3  | ---- | implementation hat nicht funktioniert |       
+| 1.4  | 20.02.2023 | teilweise implementiert |   
+| 1.5  | 20.02.2023 | erfolgreich implementiert |       
+| 1.6  | 13.02.2023 | erfolgreich implementiert |   
+| 1.7  | 27.02.2023 | implementiert jedoch fehlerhaft |       
+| 1.8  | 13.02.2023 | nicht implementiert |
+| 1.9  | 27.02.2023 | erfolgreich implementiert |       
+| 1.10 | 20.02.2023 | teilweise implementiert(es kann zwei mal das gleiche kommen) |  
+| 1.11 | 20.02.2023 | erfolgreich implementiert |       
+| 1.12 | 20.02.2023 | nicht implementiert |  
+| 1.12 | 20.02.2023 | erfolgreich implementiert |
 
 # 7 Projektdokumentation
 
 | US-№ | Erledigt? | Entsprechende Code-Dateien oder Erklärung |
 | ---- | --------- | ----------------------------------------- |
-| 1    | ja / nein |                                           |
-| ...  |           |                                           |
+| 1    | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
+| 2  | nein | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
+| 3    |  |  |
+| 4  | teilweise ja| ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
+| 5    | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
+| 6  | ja| ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) Der Kontostand wird dauerhaft auf dem GUI angezeigt|
+| 7    | ja-funktioniert nicht  | Die anzahl verbleibender Herzen wird angezeigt jedoch kann man auch wenn man keine Leben mehr hat weitespielen. |
+| 8  | nein |  |
+| 10  | nein |  |
+| 11  | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
+| 12  | nein |  |
+| 13  | teilweise ja |  ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) Der Admin kann wörter und Tipps löschen aber nur Wörter hinzufügen aber keine Tipps |
 
 # 8 Testprotokoll
 
-✍️ Fügen Sie hier den Link zu dem Video ein, welches den Testdurchlauf dokumentiert.
+
+
 
 | TC-№ | Datum | Resultat | Tester |
 | ---- | ----- | -------- | ------ |
 | 1.1  |       |          |        |
 | ...  |       |          |        |
 
-✍️ Vergessen Sie nicht, ein Fazit hinzuzufügen, welches das Test-Ergebnis einordnet.
+Fazit:
+Die meisten Testfälle sind erfolgreich und das Grundprinzip des Spieles funktionert jedoch fehlen vereinzelte Funktionen im grossen und ganzen jedoch ist das Spiel anwendbar.
 
 # 9 `README.md`
 
