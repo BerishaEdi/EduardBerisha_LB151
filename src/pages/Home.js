@@ -11,7 +11,7 @@ const Home = () => {
   const [guthaben, setGuthaben] = useState(500)
   const [userName, setUserName] = useState('');
   const navigate = useNavigate();
-
+  const [lives, setLives] = useState(3);
 
   useEffect(() => {
     if (!userName) {
@@ -177,6 +177,7 @@ const Home = () => {
         </form>
         <p>Tipp: {hint}</p>
         <p>Guthaben: {guthaben}</p>
+        <p>Leben: {lives}</p>
         <button className="GambleButton" onClick={handleButtonClick}>Dreh am Rad</button>
         <br />
         <button
