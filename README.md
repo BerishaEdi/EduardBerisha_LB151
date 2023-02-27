@@ -4,11 +4,11 @@ Berisha Eduard
 
 | Datum | Version | Zusammenfassung                                              |
 | ----- | ------- | ------------------------------------------------------------ |
-| 6.02.2023 | 0.0.1   | Gameprinzip + Logik implementiert. |
+| 6.02.2023 | 0.0.1   | Adminseite erstellt |
 | 13.02.2023 | 0.0.2 | Firebase Konfigurieren, Datenbank und Authentifikation einrichten |
 | 13.02.2023 | 0.0.3   | Admin Login mit Firebase eingerichtet |
 | 20.02.2023 | 0.0.4   | Funktionalität für das Spiel erstellt. |
-| 26.02.2023 | 0.0.5   | Leaderboard erstellt, Score wird in der Datenbank gespeichert und in der Rangliste ausgegeben | 
+| 26.02.2023 | 0.0.4   | Leaderboard erstellt, Score wird in der Datenbank gespeichert und in der Rangliste ausgegeben | 
 | 27.02.2023 | 1.0.0   | Bugs behoben |
 
 # 0 Ihr Projekt
@@ -77,7 +77,7 @@ Quiz-Seite:
 
 Admin-Interface
 
-![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG)
+![alt text](https://github.com/BerishaEdi/lb151/blob/master/Admin-gui.PNG)
 
 
 # 6 Implementation
@@ -99,12 +99,24 @@ Admin-Interface
 
 ✍️ Fügen Sie hier den Link zu dem Video ein, welches den Testdurchlauf dokumentiert.
 
-| TC-№ | Datum | Resultat | Tester |
-| ---- | ----- | -------- | ------ |
-| 1.1  |       |          |        |
-| ...  |       |          |        |
+| User Story | Datum | Beschreibung |
+| ---- | ------| -------- |
+| 1.1  | 13.02.2023 | erfolgreich implementiert |       
+| 1.2  | 20.02.2023 | erfolgreich implementiert |
+| 1.3  | ---- | implementation hat nicht funktioniert |       
+| 1.4  | 20.02.2023 | teilweise implementiert |   
+| 1.5  | 20.02.2023 | erfolgreich implementiert |       
+| 1.6  | 13.02.2023 | erfolgreich implementiert |   
+| 1.7  | 27.02.2023 | implementiert jedoch fehlerhaft |       
+| 1.8  | 13.02.2023 | nicht implementiert |
+| 1.9  | 27.02.2023 | erfolgreich implementiert |       
+| 1.10 | 20.02.2023 | teilweise implementiert(es kann zwei mal das gleiche kommen) |  
+| 1.11 | 20.02.2023 | erfolgreich implementiert |       
+| 1.12 | 20.02.2023 | nicht implementiert |  
+| 1.12 | 20.02.2023 | erfolgreich implementiert |
 
-✍️ Vergessen Sie nicht, ein Fazit hinzuzufügen, welches das Test-Ergebnis einordnet.
+Fazit:
+Die meisten Testfälle sind erfolgreich und das Grundprinzip des Spieles funktionert jedoch fehlen vereinzelte Funktionen im grossen und ganzen jedoch ist das Spiel anwendbar.
 
 # 9 `README.md`
 
