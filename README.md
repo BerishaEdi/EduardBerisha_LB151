@@ -71,12 +71,15 @@ Das Interface zur Interaktion mit der Datenbank wird in diesem Beispiel durch di
 # 5 Prototyp
 Quiz-Seite:
 
-![Uploading image.png…]()
-
+![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG)
 
 
 
 Admin-Interface
+
+![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG)
+
+
 # 6 Implementation
 
 ✍️ Halten Sie fest, wann Sie welche User Story bearbeitet haben
