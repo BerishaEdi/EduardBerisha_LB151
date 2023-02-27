@@ -82,23 +82,6 @@ Admin-Interface
 
 # 6 Implementation
 
-✍️ Halten Sie fest, wann Sie welche User Story bearbeitet haben
-
-| User Story | Datum | Beschreibung |
-| ---------- | ----- | ------------ |
-| ...        |       |              |
-
-# 7 Projektdokumentation
-
-| US-№ | Erledigt? | Entsprechende Code-Dateien oder Erklärung |
-| ---- | --------- | ----------------------------------------- |
-| 1    | ja / nein |                                           |
-| ...  |           |                                           |
-
-# 8 Testprotokoll
-
-✍️ Fügen Sie hier den Link zu dem Video ein, welches den Testdurchlauf dokumentiert.
-
 | User Story | Datum | Beschreibung |
 | ---- | ------| -------- |
 | 1.1  | 13.02.2023 | erfolgreich implementiert |       
@@ -114,6 +97,33 @@ Admin-Interface
 | 1.11 | 20.02.2023 | erfolgreich implementiert |       
 | 1.12 | 20.02.2023 | nicht implementiert |  
 | 1.12 | 20.02.2023 | erfolgreich implementiert |
+
+# 7 Projektdokumentation
+
+| US-№ | Erledigt? | Entsprechende Code-Dateien oder Erklärung |
+| ---- | --------- | ----------------------------------------- |
+| 1    | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
+| 2  | nein | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
+| 3    |  |  |
+| 4  | teilweise ja| ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
+| 5    | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
+| 6  | ja| ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) Der Kontostand wird dauerhaft auf dem GUI angezeigt|
+| 7    | ja-funktioniert nicht  | Die anzahl verbleibender Herzen wird angezeigt jedoch kann man auch wenn man keine Leben mehr hat weitespielen. |
+| 8  | nein |  |
+| 10  | nein |  |
+| 11  | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
+| 12  | nein |  |
+| 13  | teilweise ja |  ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) Der Admin kann wörter und Tipps löschen aber nur Wörter hinzufügen aber keine Tipps |
+
+# 8 Testprotokoll
+
+
+
+
+| TC-№ | Datum | Resultat | Tester |
+| ---- | ----- | -------- | ------ |
+| 1.1  |       |          |        |
+| ...  |       |          |        |
 
 Fazit:
 Die meisten Testfälle sind erfolgreich und das Grundprinzip des Spieles funktionert jedoch fehlen vereinzelte Funktionen im grossen und ganzen jedoch ist das Spiel anwendbar.
