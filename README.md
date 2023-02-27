@@ -117,8 +117,8 @@ Admin-Interface
 | 13  | teilweise ja |  ![alt text](https://github.com/BerishaEdi/lb151/blob/master/src/images/userstory13.png) Der Admin kann wörter und Tipps löschen aber nur Wörter hinzufügen aber keine Tipps |
 
 # 8 Testprotokoll
-[![Projekt Demonstration](https://github.com/BerishaEdi/lb151/blob/master/src/images/React%20App%20-%20Google%20Chrome%202023-02-27%2010-36-10.mp4)
-Das Video müssen Sie auf Ihrem Gerät runterladen da es hier nicht abgespielt werden Kann
+![Projekt Demonstration](https://github.com/BerishaEdi/lb151/blob/master/src/images/React%20App%20-%20Google%20Chrome%202023-02-27%2010-36-10.mp4)
+Das Video müssen Sie auf Ihrem Gerät runtergeladen da es hier nicht abgespielt werden kann.
 
 
 | TC-№ | Datum | Resultat | Tester |
