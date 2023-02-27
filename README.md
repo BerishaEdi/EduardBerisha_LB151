@@ -102,18 +102,19 @@ Admin-Interface
 
 | US-№ | Erledigt? | Entsprechende Code-Dateien oder Erklärung |
 | ---- | --------- | ----------------------------------------- |
-| 1    | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
-| 2  | nein | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
+| 1    | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/src/images/handleLogin.png) |
+| 2  | nein | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/src/images/userstory2.png) |
 | 3    |  |  |
-| 4  | teilweise ja| ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
-| 5    | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
-| 6  | ja| ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) Der Kontostand wird dauerhaft auf dem GUI angezeigt|
+| 4  | teilweise ja| ![alt text](https://github.com/BerishaEdi/lb151/blob/master/src/images/userstory4.png) |
+| 5    | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/src/images/userstory5.png) |
+| 6  | ja| ![alt text](https://github.com/BerishaEdi/lb151/blob/master/src/images/userstory6.png) Der Kontostand wird dauerhaft auf dem GUI angezeigt|
 | 7    | ja-funktioniert nicht  | Die anzahl verbleibender Herzen wird angezeigt jedoch kann man auch wenn man keine Leben mehr hat weitespielen. |
 | 8  | nein |  |
+| 9  | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/src/images/userstory9.png) |
 | 10  | nein |  |
-| 11  | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) |
+| 11  | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/src/images/userstory11.png) |
 | 12  | nein |  |
-| 13  | teilweise ja |  ![alt text](https://github.com/BerishaEdi/lb151/blob/master/quiz-gui.PNG) Der Admin kann wörter und Tipps löschen aber nur Wörter hinzufügen aber keine Tipps |
+| 13  | teilweise ja |  ![alt text](https://github.com/BerishaEdi/lb151/blob/master/src/images/userstory13.png) Der Admin kann wörter und Tipps löschen aber nur Wörter hinzufügen aber keine Tipps |
 
 # 8 Testprotokoll
 
