@@ -110,7 +110,7 @@ Admin-Interface
 | 6  | ja| ![alt text](https://github.com/BerishaEdi/lb151/blob/master/src/images/userstory6.png) Der Kontostand wird dauerhaft auf dem GUI angezeigt|
 | 7    | ja-funktioniert nicht  | Die anzahl verbleibender Herzen wird angezeigt jedoch kann man auch wenn man keine Leben mehr hat weitespielen. |
 | 8  | nein |  |
-| 9  | ja |  |
+| 9  | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/src/images/userstory9.png) |
 | 10  | nein |  |
 | 11  | ja | ![alt text](https://github.com/BerishaEdi/lb151/blob/master/src/images/userstory11.png) |
 | 12  | nein |  |
