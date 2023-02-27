@@ -52,23 +52,31 @@ Das Interface zur Interaktion mit der Datenbank wird in diesem Beispiel durch di
 | 11  | Muss | Funktional | Als Kandidat möchte ich die Möglichkeit haben, jederzeit das Spiel zu beenden und meinen aktuellen Gewinn in die Highscore-Liste zu übernehmen, oder das Spiel fortzusetzen, um einen höheren Gewinn zu erzielen. |
 | 12 | Muss | Funktional |Als Kandidat möchte ich, das meine Spielrunden gezählt werden, um zu sehen wie viele Runden ich effektiv gebraucht habe um meine Geldsumme zu erspielen. |
 | 13 | Muss | Rand | Als Administrator möchte ich eine bestimmte Anzahl von Wörtern und Fragen in das Spiel einfügen können, um sicherzustellen, dass genug Inhalt vorhanden ist, um das Spiel interessant und unterhaltsam zu machen |
-
-
-✍️ Jede User Story hat eine ganzzahlige Nummer (1, 2, 3 etc. oder Zahl), eine Verbindlichkeit (Muss oder Kann?), und einen Typ (Funktional, Qualität, Rand). 
+ 
 
 # 4.2 Testfälle
 
-| TC-№ | Vorbereitung | Eingabe | Erwartete Ausgabe |
-| ---- | ------------ | ------- | ----------------- |
-| 1.1  |              |         |                   |
-| ...  |              |         |                   |
+| Tc-Nr | Vorbereitung | Eingabe  | Erwartete Ausgabe                       |
+| ---- | --------------- | ---- | ---------------------------------- |
+| 1.1  | Der Admin Account existiert | Email und Passwort | Weiterleitung zur Adminseite. | 
+| 1.2  | Der Admin Account existiert | Neues Rätselwort Hinzugügen | Erfolgreiches Hinzufügen des Rätselwortes. |
+| 1.4  | Highscoreliste enthätl Spielerdaten |  | Der Highscore wird gelöscht. |
+| 1.5  | Das Spiel Starten | Den Namen eingeben | Der Name wird in der Datenbank gepseichert und im Leaderboard angezeigt. |
+| 1.6  | Man befindet sich im Spiel | - | Der Kontostand wird dauerhaft auf dem neusten Stand angezeigt. |
+| 1.7  | Man befindet sich im Spiel | - | Der Lebenstand wird dauerhaft auf dem neusten Stand angezeigt. |
+| 1.9  | Man befindet sich auf der Leaderboardseite | - | Es wird der Leaderboard mit allen Spielern angezeigt nach Guthaben sortiert. |
+| 1.11  | Man befindet sich im Spiel | Man drückt den Knopf auszahlen | Man wird auf die Startseite zurückgelitet und der Score wird im Leaderboard gezeigt |
 
-✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
 
 # 5 Prototyp
+Quiz-Seite:
 
-✍️ Erstellen Sie Prototypen für das GUI (Admin-Interface und Quiz-Seite).
+![Uploading image.png…]()
 
+
+
+
+Admin-Interface
 # 6 Implementation
 
 ✍️ Halten Sie fest, wann Sie welche User Story bearbeitet haben
