@@ -60,7 +60,7 @@ Das Interface zur Interaktion mit der Datenbank wird in diesem Beispiel durch di
 | ---- | --------------- | ---- | ---------------------------------- |
 | 1.1  | Der Admin Account existiert | Email und Passwort | Weiterleitung zur Adminseite. | 
 | 1.2  | Der Admin Account existiert | Neues Rätselwort Hinzugügen | Erfolgreiches Hinzufügen des Rätselwortes. |
-| 1.4  | Highscoreliste enthätl Spielerdaten |  | Der Highscore wird gelöscht. |
+| 1.4  | Highscoreliste enthält Spielerdaten |  | Der Highscore wird gelöscht. |
 | 1.5  | Das Spiel Starten | Den Namen eingeben | Der Name wird in der Datenbank gepseichert und im Leaderboard angezeigt. |
 | 1.6  | Man befindet sich im Spiel | - | Der Kontostand wird dauerhaft auf dem neusten Stand angezeigt. |
 | 1.7  | Man befindet sich im Spiel | - | Der Lebenstand wird dauerhaft auf dem neusten Stand angezeigt. |
@@ -117,25 +117,34 @@ Admin-Interface
 | 13  | teilweise ja |  ![alt text](https://github.com/BerishaEdi/lb151/blob/master/src/images/userstory13.png) Der Admin kann wörter und Tipps löschen aber nur Wörter hinzufügen aber keine Tipps |
 
 # 8 Testprotokoll
-
-
+![Projekt Demonstration](https://github.com/BerishaEdi/lb151/blob/master/src/images/React%20App%20-%20Google%20Chrome%202023-02-27%2010-36-10.mp4)
+Das Video müssen Sie auf Ihrem Gerät runtergeladen da es hier nicht abgespielt werden kann.
 
 
 | TC-№ | Datum | Resultat | Tester |
 | ---- | ----- | -------- | ------ |
-| 1.1  |       |          |        |
-| ...  |       |          |        |
+| 1.1  |27.02.2023| Okey | Eduard Berisha |
+| 1.2  |27.02.2023| Okey| Eduard Berisha |
+| 1.4  |27.02.2023| Okey | Eduard Berisha |
+| 1.5  |27.02.2023| Okey | Eduard Berisha |
+| 1.6  |27.02.2023| Okey| Eduard Berisha |
+| 1.7  |27.02.2023| Not Okey| Eduard Berisha |
+| 1.9  |27.02.2023| Okey | Eduard Berisha |
+| 1.11 |27.02.2023| Okey| Eduard Berisha |
+
 
 Fazit:
-Die meisten Testfälle sind erfolgreich und das Grundprinzip des Spieles funktionert jedoch fehlen vereinzelte Funktionen im grossen und ganzen jedoch ist das Spiel anwendbar.
+Die meisten Testfälle sind erfolgreich und das Grundprinzip des Spieles funktionert jedoch fehlen vereinzelte Funktionen im grossen und ganzen jedoch ist das Spiel anwendbar. Diese Version vom Spiel wäre noch nicht bereit zum verföffentlicht werden.
 
 # 9 `README.md`
 
-✍️ Beschreiben Sie ausführlich in einer README.md, wie Ihre Applikation gestartet und ausgeführt wird. Legen Sie eine geeignete Möglichkeit (Skript, Export, …) bei, Ihre Datenbank wiederherzustellen.
+Um das Projekt zu starten 
+benötigen Sie einen Quelltext-Editor üblicherweise Visual Studio Code, 
+Sie müssen auf Ihrem Gerät Node.js installiert haben und mein Projekt lokal abgespeichert haben und im Quelltext-Editor geöffnet haben.
+Im Terminal können sie "npm install" ausführen womit alle notwendigen Packages runtergeladen werden und Sie nur noch "npm start" eingeben müssen und das Projekt startet.
 
 # 10 Allgemeines
 
-- [ ] Ich habe die Rechtschreibung überprüft
-- [ ] Ich habe überprüft, dass die Nummerierung von Testfällen und User Stories übereinstimmen
-- [ ] Ich habe alle mit ✍️ markierten Teile ersetzt
-
+- [x] Ich habe die Rechtschreibung überprüft
+- [x] Ich habe überprüft, dass die Nummerierung von Testfällen und User Stories übereinstimmen
+- [x] Ich habe alle mit ✍️ markierten Teile ersetzt
